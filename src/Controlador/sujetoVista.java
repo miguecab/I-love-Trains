@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/Controlador/sujetoVista.java
 package controlador;
 
 import modelo.*;
@@ -8,19 +7,11 @@ public class sujetoVista
 	// Atributos
     Tren misTrenes[];
     Senal misSe�ales[];
-=======
-package def;
 /*
-Código revisado por Christian Álvarez
+Código revisado por Christian �?lvarez
 Se han colocado las llaves, renombrar atributos correctamente
 */
 
-
-public class suejtoVista {
-	// Atributos
-    Tren misTrenes[];
-    Signal misSeñales[];
->>>>>>> 2223528be8e7f01a5c867bac4408eb29b327ce06:src/Controlador/suejtoVista.java
 	//observadores misObservadores[]; mejor usar ArrayList
     ArrayList<Observador> misObservadores;
     // SOLO DEL MUNDO

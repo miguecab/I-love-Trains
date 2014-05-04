@@ -21,7 +21,6 @@ public class CargarMundo {
 	private Senal[] _senales;
 	private Tren[] _trenes ;
 	
-	
 	/**
 	 * Recibe un archivo abierto <mapa>
 	 */
@@ -53,12 +52,12 @@ public class CargarMundo {
 			System.err.print(e.getMessage());
 			System.exit(1);
 		}
-		agregarTrayecto();
+		//agregarTrayecto();
 		sc.close();
 		return tablero;
 	}
 	
-	private void locomotora(int i , int j) {
+	private void locomotora(int i , int j){
 		int k = _trenes.length + 1;
 		Coordenada c = new Coordenada(i, j);
 		mundo.setTren(_trenes[k] = new Tren(c), k);

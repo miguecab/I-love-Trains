@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package controlador;
 
 import java.util.ArrayList;
@@ -10,17 +9,11 @@ public class sujetoMundo
 	// Atributos
     Tren misTrenes[];
     Senal misSenales[];
-=======
-package def;
 /*
-Revisado por Christian Álvarez
+Revisado por Christian �?lvarez
 -Se han colocado las llaves, renombrar correctamente los atributos.
 */
-public class sujetoMundo {
-	// Atributos
-    Trenes misTrenes[];
-    Signal misSeñales[];
->>>>>>> 2223528be8e7f01a5c867bac4408eb29b327ce06
+
 //    observadores misObservadores[];
     ArrayList<Observador> misObservadores;
     // SOLO DEL MUNDO

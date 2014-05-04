@@ -1,0 +1,27 @@
+/Fallos detectados(Se han dejado comentados para poder hacer las pruebas):
+
+	*Clase Controlador:
+		-Constructura entera.
+	*Clase Mundo:
+		-Incluido un Main incoherente. Codigo insertado en constructora
+		-Constructora: bucle infinito. Mal implementado, no permite a la vista arrancar.
+			Se sugiere incluirla en una funcion auxiliar "actualizarVista". Consultar practica 4 TP para coger el concepto.
+		-Funcion "mostrarMapa" mal planteada para vista. Se ha corregido, detalles en el código.
+	*Clase CargarMundo:
+		-Funciones "locomotora","semV","semR" y "agregarTrayecto": fallos de NULLPOINTEREXCEPTION en todas. No se controla el caso en que esten vacias.
+		-Funcion "cargarMapa": se ha comentado la llamada a "agregarTrayecto()" en línea 55 para permtir pruebas.
+	*Clase sujetoMundo:
+		-Error de implementacion. Necesitan una clase "Observador" que no existe.
+	*Clase sujetoVista:
+		-Mismo clase anterior clase nombrada.
+
+/Funciones actualizadas:
+	*Clase Mundo:
+		-Función "mostrarMapa".
+	*Main:
+		-Reescrito Main para que invoque a la ventana Principal
+
+/Clases implementadas:
+	*Clase Mapa:
+		Implementada en paquete vista, construye un JPanel con un JTextArea para representar la información del mundo en un mapa de caracteres.
+

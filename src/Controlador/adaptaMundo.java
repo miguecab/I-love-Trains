@@ -1,7 +1,7 @@
 package controlador;
 
 /*
-Código revisado por Christian Álvarez
+Código revisado por Christian �?lvarez
 Se han colocado las llaves
 */
 

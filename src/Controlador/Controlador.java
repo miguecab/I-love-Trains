@@ -31,9 +31,9 @@ public class Controlador {
 	 * @return controlador           
 	 */
 	public Controlador() {
-		if (controlador == null) {
+		/*if (controlador == null) {
 			controlador = new Controlador();
-		}
+		}*/
 	}
 	
 	//Metodos para la creacion y gestion de la ventana principal

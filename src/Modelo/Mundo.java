@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
+import javax.swing.JTextArea;
+
 import controlador.CargarMundo;
 
 /**
@@ -16,18 +18,19 @@ public class Mundo {
 	private Senal[] senales;
 	private char[][] estadoMundo;
 	private static final  int DIM = 60;
-	public void main(String[] args) {
+	public Mundo()
+	{
 		try {
-			String nombreArchivo = "mapa(txt).txt";
+			String nombreArchivo = "mapa.txt";
 			InputStream mapa = new FileInputStream(nombreArchivo);
 			CargarMundo cargarMundo = new CargarMundo();
 			estadoMundo = cargarMundo.cargarMapa(mapa);
 		} catch (FileNotFoundException e) {
 			System.err.println("No se ha encontrado el archivo");
 		}
-		while(true){
+		/*while(true){
 			recalcularEstadoTrenes();
-		}
+		}*/
 		
 		
 	}
@@ -38,15 +41,25 @@ public class Mundo {
 		}
 	}
 	
-	public void mostrarMapa(){
+	//Cambio de void a JTextArea para la vista en "Mapa". Cambios indicados con un comentario "*"
+	public JTextArea mostrarMapa()
+	{
+		/* * */JTextArea texto = new JTextArea();
+		/* * */StringBuilder contenido = new StringBuilder();
 		for(int i = 0; i < DIM; i++){
 			for(int j = 0; j < DIM; j++){
-				if(estadoMundo[i][j] == '*')
-					System.out.print(" ");
-				else System.out.print(estadoMundo[i][j]);
+				if(estadoMundo[j][i] == '*')//Columnas extrapoladas, se han corregido (antes era [i][j]
+					//System.out.print(" ");
+					/* * */contenido.append("S");	
+				else 
+					//System.out.print(estadoMundo[i][j]);
+					/* * */contenido.append(estadoMundo[j][i]);				
 			}
-			System.out.println("");
+			//System.out.println("");
+			/* * */contenido.append('\n');
 		}
+		/* * */texto.setText(contenido.toString());
+		/* * */return texto;
 	}
 	
 	public Senal[] getSenales() {
